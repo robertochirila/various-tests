@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { MainForm } from './components/MainForm'
+
+/**
+ * We want to pass to this component thhe MainForm component
+ * that will handle all the logic and pass that logic through props to the child components
+ */
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="app">
+      <header className="app-header">
+        <h1>Testing Various Features</h1>
       </header>
+      <div className="wrapper">
+        <h4>Let's begin with a multi step form !</h4>
+        <MainForm />
+      </div>
     </div>
   );
 }
