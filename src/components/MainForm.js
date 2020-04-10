@@ -25,22 +25,35 @@ export class MainForm extends Component {
 
 
     handleIncrementStepSimulation(e) {
-        console.log("Bind function")
-        console.log(e.target.name)
         const { step } = this.state
         this.setState({ step: step + 1 })
     }
 
     incrmentStepSimulation = (e) => {
-        console.log("Property function")
-        console.log(e.target.name)
         const { step } = this.state
         this.setState({ step: step + 1 })
 
     }
 
+    handleInputChange = input => e => {
+        this.setState({ [input]: e.target.value })
+    }
+
+    nextStep = () => {
+        const { step } = this.state
+        this.setState({ step: step + 1 })
+    }
+
+    previousStep = () => {
+        const { step } = this.state
+        this.setState({ step: step - 1 })
+    }
+
     render() {
         const { step } = this.state
+        const { firstName, lastName, email, occupation, city, bio } = this.state;
+        const values = { firstName, lastName, email, occupation, city, bio };
+
 
         const renderButtons = (
             <div>
@@ -60,7 +73,10 @@ export class MainForm extends Component {
             case 1:
                 return (
                     <React.Fragment>
-                        <CredentialsForm />
+                        <CredentialsForm
+                            values={values}
+                            nextStep={this.nextStep}
+                            handleInputChange={this.handleInputChange} />
                         {renderButtons}
                     </React.Fragment>
                 )
