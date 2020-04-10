@@ -80,7 +80,9 @@ export class MainForm extends Component {
                 )
             case 4:
                 return (
-                    <Success />
+                    <React.Fragment>
+                        <Success />
+                    </React.Fragment>
                 )
         }
     }
