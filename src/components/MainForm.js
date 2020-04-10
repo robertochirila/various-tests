@@ -29,7 +29,7 @@ export class MainForm extends Component {
         this.setState({ step: step + 1 })
     }
 
-    incrmentStepSimulation = (e) => {
+    incrementStepSimulation = (e) => {
         const { step } = this.state
         this.setState({ step: step + 1 })
 
@@ -59,7 +59,7 @@ export class MainForm extends Component {
             <div className="app-simulation-wrapper">
                 <label>
                     Increment Step Simulation Using Property
-                <button onClick={this.incrmentStepSimulation} name="PropertyCallButton">+</button>
+                <button onClick={this.incrementStepSimulation} name="PropertyCallButton">+</button>
                 </label>
                 <label>
                     Increment Step Simulation Using Bind Inside Constructor
