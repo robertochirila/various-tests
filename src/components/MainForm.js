@@ -51,12 +51,12 @@ export class MainForm extends Component {
 
     render() {
         const { step } = this.state
-        const { firstName, lastName, email, occupation, city, bio } = this.state;
-        const values = { firstName, lastName, email, occupation, city, bio };
+        const { firstName, lastName, email, occupation, age, bio } = this.state;
+        const values = { firstName, lastName, email, occupation, age, bio };
 
 
         const renderButtons = (
-            <div>
+            <div className="app-simulation-wrapper">
                 <label>
                     Increment Step Simulation Using Property
                 <button onClick={this.incrmentStepSimulation} name="PropertyCallButton">+</button>
@@ -83,7 +83,12 @@ export class MainForm extends Component {
             case 2:
                 return (
                     <React.Fragment>
-                        <PersonalForm />
+                        <PersonalForm
+                            values={values}
+                            nextStep={this.nextStep}
+                            previousStep={this.previousStep}
+                            handleInputChange={this.handleInputChange}
+                        />
                         {renderButtons}
                     </React.Fragment>
                 )
