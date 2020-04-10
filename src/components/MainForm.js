@@ -95,7 +95,11 @@ export class MainForm extends Component {
             case 3:
                 return (
                     <React.Fragment>
-                        <ConfirmSubmit />
+                        <ConfirmSubmit
+                            values={values}
+                            nextStep={this.nextStep}
+                            previousStep={this.previousStep}
+                        />
                         {renderButtons}
                     </React.Fragment>
                 )

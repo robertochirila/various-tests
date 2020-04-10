@@ -4,7 +4,7 @@ export class Success extends Component {
     render() {
         return (
             <div>
-                <p>Success</p>
+                <p>Thank you for providing the data !</p>
             </div>
         )
     }

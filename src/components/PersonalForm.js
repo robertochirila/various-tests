@@ -14,7 +14,7 @@ export class PersonalForm extends Component {
         const { values } = this.props
         return (
             <div>
-                <h4>PersonalForm</h4>
+                <h4>Personal Form</h4>
                 <label>
                     Age:
                     <input type="text"
